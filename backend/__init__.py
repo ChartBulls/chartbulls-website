@@ -11,6 +11,9 @@ from flask import Flask
 
 
 app = Flask(__name__)
+            
+# Configuring the app from config module
+app.config.from_pyfile('config.py')
 
 @app.route("/")
 def hello():
