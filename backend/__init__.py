@@ -12,6 +12,7 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate
 
 
 # Creating the Flask app
@@ -23,10 +24,14 @@ app = Flask(__name__,
 app.config.from_pyfile('config.py')
 
 # Initializing the Flask extensions
-db = SQLAlchemy(app)
+db      = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 # Importing the database models
 from backend import models
 
 # Importing the app views
 from backend import views
+
+# Importing the CLI commands
+from backend import commands
