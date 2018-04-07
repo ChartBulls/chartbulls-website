@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-    commands.py
-    ~~~~~~~~~~~
+    backend.commands
+    ~~~~~~~~~~~~~~~~
     
     This module implements the CLI commands of this application.
 
