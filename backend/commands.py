@@ -17,6 +17,7 @@
     - Type the following in the command-line:
       flask [COMMAND]
 """
+
 import click
 
 from backend import app, db

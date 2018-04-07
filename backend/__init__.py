@@ -8,6 +8,7 @@
 
     Flask extensions included in this application:
     - Flask-SQLAlchemy : Used for creating database models (using SQLAlchemy).
+    - Flask-Migrate    : Used for performing SQLAlchemy database migrations.
 """
 
 from flask import Flask
