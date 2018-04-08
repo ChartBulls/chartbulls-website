@@ -6,7 +6,7 @@
 
     This module contains the configuration values of this application.
 
-    For more information on how to handle configuration
+    For more information on how to handle configuration:
     - Flask            : http://flask.pocoo.org/docs/0.12/config/
     - Flask-SQLAlchemy : http://flask-sqlalchemy.pocoo.org/2.3/config/
 """
