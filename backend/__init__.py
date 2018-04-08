@@ -14,8 +14,8 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_restless import APIManager
 from flask_migrate import Migrate
+from flask_restless import APIManager
 
 
 # Creating the Flask app
@@ -28,8 +28,8 @@ app.config.from_pyfile('config.py')
 
 # Initializing the Flask extensions
 db       = SQLAlchemy(app)
-restless = APIManager(app, flask_sqlalchemy_db=db)
 migrate  = Migrate(app, db)
+restless = APIManager(app, flask_sqlalchemy_db=db)
 
 # Importing the database models
 from backend import models
