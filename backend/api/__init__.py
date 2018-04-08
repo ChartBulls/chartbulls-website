@@ -13,5 +13,5 @@
 # URL for the API version
 URL = '/api/v1'
 
-from backend.api import api_users
-from backend.api import api_accounts
+from backend.api import users
+from backend.api import accounts
