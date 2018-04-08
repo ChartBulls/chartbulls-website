@@ -4,7 +4,7 @@
     backend.models package
     ~~~~~~~~~~~~~~~~~~~~~~
 
-    This package implements the database models of this application.
+    This package contains the database models of this application.
 
     For more information on how to create models:
         - Flask-SQLAlchemy : http://flask-sqlalchemy.pocoo.org/2.3/
