@@ -1,0 +1,20 @@
+.jumbotron {
+    background:      url('../img/jumbotron.jpg') no-repeat;
+    background-size: cover;
+    padding-bottom:  120px;
+    padding-top:     120px;
+}
+
+.header {
+    color:       #fff;
+    display:     block;
+    font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size:   3.2em;
+    font-weight: 600;
+}
+
+.header-description {
+    color:       #fff;
+    font-size:   2em;
+    font-weight: 300;
+}
