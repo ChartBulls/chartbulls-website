@@ -21,6 +21,7 @@ DEBUG = os.environ.get('DEBUG', True)
 # Flask-Mail
 MAIL_SERVER         = os.environ.get('MAIL_SERVER', 'localhost')
 MAIL_PORT           = os.environ.get('MAIL_PORT', 25)
+MAIL_DEBUG          = os.environ.get('MAIL_DEBUG', 1)
 MAIL_USE_SSL        = os.environ.get('MAIL_USE_SSL', False)
 MAIL_USERNAME       = os.environ.get('MAIL_USERNAME', 'email@address.com')
 MAIL_PASSWORD       = os.environ.get('MAIL_PASSWORD' 'password')
