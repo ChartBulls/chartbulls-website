@@ -7,11 +7,12 @@
     This module implements the CLI commands of this application.
 
     Commands:
-    - run      : Runs the application (host: localhost, port: 5000).
-    - create   : Creates all of the tables in the database.
-    - drop     : Drops all of the tables from the database.
-    - recreate : Drops and recreates the tables in the database.
-    - db       : Performs database migrations.
+    - run       : Runs the application (host: localhost, port: 5000).
+    - create    : Creates all of the tables in the database.
+    - drop      : Drops all of the tables from the database.
+    - recreate  : Drops and recreates the tables in the database.
+    - subscribe : Subscribes an user and sends an email.
+    - db        : Performs database migrations.
 
     HOW TO USE:
     - Type the following in the command-line:
@@ -46,3 +47,11 @@ def recreate():
     db.drop_all()
     db.create_all()
     click.echo('Recreated all of the tables in the database.')
+
+
+# COMMAND: subscribe
+@app.cli.command()
+def subscribe():
+    """Subscribes an user and sends an email."""
+    # TODO: Add logic here.
+    click.echo('Subscribed an user and sent an email.')

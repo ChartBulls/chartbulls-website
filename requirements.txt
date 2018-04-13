@@ -1,4 +1,5 @@
 Flask            == 0.12.2
+Flask-Mail       == 0.9.1
 Flask-Migrate    == 2.1.1
 Flask-Restless   == 0.17.0
 Flask-SQLAlchemy == 2.3.2
