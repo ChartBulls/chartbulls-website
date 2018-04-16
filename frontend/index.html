@@ -18,7 +18,7 @@
 
   <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-light bg-light">
+    <nav class="navbar fixed-top">
       <a class="navbar-brand" href="#">
         <img src="frontend/assets/img/logo.jpg" width="200" height="40" class="d-inline-block align-top">
       </a>
@@ -26,20 +26,28 @@
     <!-- Jumbotron -->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="header">Know Your Worth</h1>
-        <p class="header-description">Combine all of your investments into one account.</p>
+        <h1 class="header">KNOW YOUR WORTH</h1>
+        <p class="header-description">Combine all of your investment accounts into one.</p>
         <p class="lead">
-            <a class="btn btn-info btn-lg" href="#" role="button">Subscribe Today</a>
+            <a class="btn btn-info btn-lg" href="#" role="button">Gain Early Access Today</a>
           </p>
       </div>
     </div>
+
+    <!-- App -->
+    <div id="app">
+      {{ message }}
+    </div>
+
     <!-- Padding -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
+   
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="frontend/assets/js/main.js"></script>
   </body>
 
 </html>
