@@ -1,6 +1,3 @@
-new Vue({
-    el: '#app',
-    data: {
-        message: 'Hello Vue!'
-    }
-})
+'use strict';
+
+console.log('Test');
