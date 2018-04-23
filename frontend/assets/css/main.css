@@ -1,5 +1,10 @@
 .navbar {
     background-color: white !important;
+    color:            black;
+}
+
+.nav-item {
+    color:        #17a2b8 !important;
 }
 
 .jumbotron {
@@ -8,6 +13,19 @@
     padding-bottom:     150px;
     margin-top:         65px;
     margin-bottom:      0px;
+}
+
+.jumbotron-img {
+    display:  inline-block;
+    overflow: hidden;
+}
+
+.jumbotron-img img {
+    -webkit-transform: scale(1.22);
+    -moz-transform:    scale(1.22);
+    -o-transform:      scale(1.22);
+    -ms-transform:     scale(1.22);
+    transform:         scale(1.22);
 }
 
 .header-title {
@@ -24,12 +42,27 @@
 
 .section-2 {
     background-color: white !important;
-    padding-top:      110px;
-    padding-bottom:   80px;
+    padding-top:      60px;
+    padding-bottom:   60px;
+    color:            black;
 }
 
 .section-3 {
     background-color: black !important;
-    padding-top:      60px;
-    padding-bottom:   60px;
+    padding-top:      40px;
+    padding-bottom:   40px;
+}
+
+.footer-above {
+    background-color: white !important;
+    padding-top:      140px;
+    padding-bottom:   140px;
+    color:            black;
+}
+
+.footer-below {
+    background-color: black !important;
+    padding-top:      15px;
+    padding-bottom:   15px;
+    color:            white;
 }

@@ -24,6 +24,7 @@ def subscribe():
         email : 'email address'
     }
     """
-    data = request.get_json(force=True)    
+    data = request.get_json(force=True)
+    print(data)
     # TODO: Data validation, subscribe user, and send email.
-    return make_response('Works!', 200)
+    return make_response('Works!', 201)
