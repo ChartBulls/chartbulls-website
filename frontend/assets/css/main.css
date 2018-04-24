@@ -53,10 +53,16 @@
     padding-bottom:   40px;
 }
 
+.section-3-description {
+    color:       white !important;
+    font-size:   1.4em;
+    font-weight: 400;
+}
+
 .footer-above {
     background-color: white !important;
-    padding-top:      140px;
-    padding-bottom:   140px;
+    padding-top:      120px;
+    padding-bottom:   120px;
     color:            black;
 }
 

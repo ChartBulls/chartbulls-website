@@ -46,19 +46,24 @@
               <h1 class="header-title"> KNOW YOUR WORTH </h1>
               <!-- Description -->
               <p class="header-description">
-                Understanding and tracking all of your investment accounts has never been easier.
-                Sync any retirement, brokerage, crypto, or bank account to see total balances,
-                daily changes, and the makeup of all of your accounts. Know your real worth, 
-                effortlessly.
+                Understanding and tracking all of your investment accounts has never been easier. 
+                View all your accounts at once, effortlessly.
               </p>
               <br>
+              <!-- Alert -->
+              <div id="alert-jumbotron" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+                <span id="alert-text-jumbotron"></span> 
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <!-- Input Group -->
               <div class="input-group">
                 <!-- Input -->
-                <input id="input-email" type="text" class="form-control" placeholder="Enter Email Address">
+                <input id="input-email-jumbotron" type="text" class="form-control" placeholder="Enter Email Address">
                 <!-- Button -->
                 <div class="input-group-append">
-                  <button class="btn btn-info btn-lg" type="button" onclick="subscribe()"> Get Early Access </button>
+                  <button class="btn btn-info btn-lg" type="button" onclick="validate('jumbotron')"> Get Early Access </button>
                 </div>
               </div>
             </div>
@@ -75,8 +80,9 @@
     </div>
     <!-- Features Section -->
     <div class="section-2 text-center">      
-      <h1> (Something here) </h1>
-      <br><br><br>
+      <h1> Full Visibility </h1>
+      <p> Our free tools allow you to really know what's going on. </p>
+      <br><br>
       <div class="container">
         <!-- Features -->
         <div class="row">
@@ -84,7 +90,7 @@
           <div class="col-md">
               <i class="fas fa-chart-line fa-5x"></i>
               <br><br>
-              <h2> The Full Picture </h2>
+              <h3> The Full Picture </h3>
               <p> 
                 Follow the real-time value of all of your balances. 
                 See the performance and balances of your retirement accounts, brokerage accounts, 
@@ -96,7 +102,7 @@
           <div class="col-md">
               <i class="fas fa-hand-holding-usd fa-5x"></i>
               <br><br>
-              <h2> Each Account </h2>
+              <h3> View Your Accounts </h3>
               <p> 
                 Dive into any of your investment accounts to see what assets you are currently 
                 holding and the price they are trading at.   
@@ -107,7 +113,7 @@
           <div class="col-md">
               <i class="fas fa-history fa-5x"></i>
               <br><br>
-              <h2> Each Trade </h2>
+              <h3> View Your Trade History </h3>
               <p> 
                 Dive into an asset to see your trade history.
                 Know the gritty details of what makes up your accounts. 
@@ -119,35 +125,34 @@
       </div>
     </div>
     <!-- Phone Section -->
-    <div class="section-3">
-      <!-- Container -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md">
-            <!-- Image -->
-            <img src="frontend/assets/img/IPhone-8.jpg" class="img-fluid">            
-          </div>
-          <div class="col-md">
-
-          </div>            
-        </div>
-      </div>
+    <div class="section-3 text-center">
+      <!-- Title -->
+      <h3> View your real time balances on the go with the Charbulls App! </h3>         
+      <!-- Image -->
+      <img src="frontend/assets/img/IPhone-8.jpg" class="img-fluid">
     </div>
     <!-- Footer Above -->
     <div class="footer-above text-center" id="get-early-access">
       <div class="container">
         <!-- Card -->
         <div class="card card-body bg-light">
-          <h3> Get Early Access </h3>
-          <p> Sign up to receive...</p>
+          <h3> Know Your Worth </h3>
+          <p> We offer free complete portfolio visibility to know what's really going on, effortlessly. </p>
           <br>
+          <!-- Alert -->
+          <div id="alert-footer" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+            <span id="alert-text-footer"></span> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
           <!-- Input Group -->
           <div class="input-group">
             <!-- Input -->
-            <input id="input-email" type="text" class="form-control" placeholder="Enter Email Address">
+            <input id="input-email-footer" type="text" class="form-control" placeholder="Enter Email Address">
             <!-- Button -->
             <div class="input-group-append">
-              <button class="btn btn-info btn-lg" type="button" onclick="subscribe()"> Get Early Access </button>
+              <button class="btn btn-info btn-lg" type="button" onclick="validate('footer')"> Get Early Access </button>
             </div>
           </div>
           <br>
@@ -164,18 +169,21 @@
     <div id="my-modal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+          <!-- Header -->
           <div class="modal-header">
-            <h5 class="modal-title">Modal title</h5>
+            <h5 class="modal-title"> You have been signed up! </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
+          <!-- Body -->
           <div class="modal-body">
-            <p>Modal body text goes here.</p>
+            <p> Help us prioritize which accounts to add first! </p>
           </div>
+          <!-- Footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary"> Save changes </button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
           </div>
         </div>
       </div>
