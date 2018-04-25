@@ -4,13 +4,13 @@
 }
 
 .nav-item {
-    color:        #17a2b8 !important;
+    color: #17a2b8 !important;
 }
 
 .jumbotron {
     background-color: black;
-    padding-top:        150px;
-    padding-bottom:     150px;
+    padding-top:        140px;
+    padding-bottom:     110px;
     margin-top:         65px;
     margin-bottom:      0px;
 }
@@ -21,11 +21,11 @@
 }
 
 .jumbotron-img img {
-    -webkit-transform: scale(1.22);
-    -moz-transform:    scale(1.22);
-    -o-transform:      scale(1.22);
-    -ms-transform:     scale(1.22);
-    transform:         scale(1.22);
+    -webkit-transform: scale(1.21);
+    -moz-transform:    scale(1.21);
+    -o-transform:      scale(1.21);
+    -ms-transform:     scale(1.21);
+    transform:         scale(1.21);
 }
 
 .header-title {

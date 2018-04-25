@@ -2,12 +2,21 @@
 
 var ajaxSettings = {
     type:        'POST',
-    contentType: 'application/json; charset=utf-8'
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json'
 };
 
 $(function() {
     $.ajaxSetup(ajaxSettings);
 });
+
+function errorAlert(type, msg) {
+    $('#alert-text-' + type).html(msg);
+    $('#alert-' + type).removeAttr('hidden');
+    $('#alert-' + type).show();
+    $('#alert-' + type).fadeTo(0, 1);
+    setTimeout(() => $('#alert-' + type).fadeTo(700, 0).slideUp(700, function () { $(this).attr('hidden'); }), 2000);
+}
 
 function validate(type) {
     var email = $('#input-email-' + type).val().trim();
@@ -15,10 +24,8 @@ function validate(type) {
     if (email) {
         subscribe(email, type);
     } else {
-        $('#alert-text-' + type).html('Email address cannot be blank.');
-        $('#alert-' + type).removeAttr('hidden');
-        setTimeout(() => $('#alert-' + type).fadeTo(700, 0).slideUp(700, function () { $(this).remove(); }), 2000);
-    }    
+        errorAlert(type, 'Please enter your email address.');
+    }
 }
 
 function subscribe(email, type) {
@@ -29,14 +36,19 @@ function subscribe(email, type) {
     $.ajax({
         url: 'api/v1/subscribe',
         data: parameters,
-        success: function(data) {            
+        success: function(data) { 
+            $('#my-modal').modal('show');           
             console.log('success : ' + type);
             console.log(data);
-            $('#my-modal').modal('show');
         },
-        error: function(data) {
+        error: function(response) {
+            if (response.responseText == 'Duplicate') {
+                errorAlert(type, 'This email address is already registered.');
+            } else {
+                errorAlert(type, 'Unable to subscribe this email address.');
+            }
             console.log('error : ' + type);
-            console.log(data);
+            console.log(response);
         }
     });
 }
