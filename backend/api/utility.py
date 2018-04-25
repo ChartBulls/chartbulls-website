@@ -35,10 +35,8 @@ def subscribe():
     user = User.query.filter_by(email=email).first()
 
     if user is None:
-        # add user
-
-        # send email
-
-        return make_response('Works!', 302)
+        # Add user
+        # Send email
+        return make_response('Works!', 201)
     else:
         return make_response('Duplicate', 400)

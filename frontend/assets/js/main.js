@@ -2,8 +2,7 @@
 
 var ajaxSettings = {
     type:        'POST',
-    contentType: 'application/json; charset=utf-8',
-    dataType: 'json'
+    contentType: 'application/json; charset=utf-8'
 };
 
 $(function() {
@@ -15,7 +14,7 @@ function errorAlert(type, msg) {
     $('#alert-' + type).removeAttr('hidden');
     $('#alert-' + type).show();
     $('#alert-' + type).fadeTo(0, 1);
-    setTimeout(() => $('#alert-' + type).fadeTo(700, 0).slideUp(700, function () { $(this).attr('hidden'); }), 2000);
+    setTimeout(() => $('#alert-' + type).fadeTo(700, 0).slideUp(700, function() { $(this).attr('hidden'); }), 2000);
 }
 
 function validate(type) {
@@ -47,8 +46,6 @@ function subscribe(email, type) {
             } else {
                 errorAlert(type, 'Unable to subscribe this email address.');
             }
-            console.log('error : ' + type);
-            console.log(response);
         }
     });
 }
