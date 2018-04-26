@@ -40,8 +40,8 @@ def subscribe():
         db.session.add(user)
         db.session.commit()
         # Send email
-        msg = Message("Welcome to ChartBulls!", recipients=[email])
-        # msg.html = render_template('email_templates/subscribed.html', email=email)
+        msg = Message('Welcome to ChartBulls!', recipients=[email])
+        msg.html = render_template('../backend/email_templates/subscribed.html')   
         mail.send(msg)
         # make response json object
         return make_response('Works!', 201)
