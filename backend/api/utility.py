@@ -9,7 +9,7 @@
 
 from flask import request, make_response
 
-from backend import app
+from backend import app, db, mail
 from backend.api import URL
 from backend.models.user import User
 
@@ -32,11 +32,18 @@ def subscribe():
     if not all(criterion):
         return make_response('Bad Request', 400)
 
-    user = User.query.filter_by(email=email).first()
+    found = User.query.filter_by(email=email).first()
 
-    if user is None:
-        # Add user
+    if found is None:
+        # Add new user
+        user = User(email)
+        db.session.add(user)
+        db.session.commit()
         # Send email
+        msg = Message("Welcome to ChartBulls!", recipients=[email])
+        # msg.html = render_template('email_templates/subscribed.html', email=email)
+        mail.send(msg)
+        # make response json object
         return make_response('Works!', 201)
     else:
         return make_response('Duplicate', 400)
