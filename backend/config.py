@@ -24,7 +24,7 @@ MAIL_PORT           = os.environ.get('MAIL_PORT', 25)
 MAIL_DEBUG          = os.environ.get('MAIL_DEBUG', 1)
 MAIL_USE_SSL        = os.environ.get('MAIL_USE_SSL', False)
 MAIL_USERNAME       = os.environ.get('MAIL_USERNAME', 'email@address.com')
-MAIL_PASSWORD       = os.environ.get('MAIL_PASSWORD' 'password')
+MAIL_PASSWORD       = os.environ.get('MAIL_PASSWORD', 'password')
 MAIL_DEFAULT_SENDER = ('ChartBulls', MAIL_USERNAME)
 
 # Flask-SQLAlchemy

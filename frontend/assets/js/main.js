@@ -35,12 +35,14 @@ function subscribe(email, type) {
     $.ajax({
         url: 'api/v1/subscribe',
         data: parameters,
-        success: function(data) { 
+        success: function(response) { 
             $('#my-modal').modal('show');           
             console.log('success : ' + type);
-            console.log(data);
+            console.log(response);
         },
         error: function(response) {
+            console.log(response);
+
             if (response.responseText == 'Duplicate') {
                 errorAlert(type, 'This email address is already registered.');
             } else {

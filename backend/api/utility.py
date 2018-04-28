@@ -6,8 +6,8 @@
 
     This module implements the utility API endpoints.
 """
-
-from flask import request, make_response
+from flask import request, make_response, render_template, json
+from flask_mail import Message
 
 from backend import app, db, mail
 from backend.api import URL
@@ -39,11 +39,12 @@ def subscribe():
         user = User(email)
         db.session.add(user)
         db.session.commit()
-        # Send email
-        msg = Message('Welcome to ChartBulls!', recipients=[email])
-        msg.html = render_template('../backend/email_templates/subscribed.html')   
-        mail.send(msg)
-        # make response json object
-        return make_response('Works!', 201)
+        print(user)
+        print(json.dumps(user.__dict__))
+        # Create email and send it
+        #msg = Message('Welcome to ChartBulls!', recipients=[email])
+        #msg.html = render_template('email_templates/subscribed.html')
+        #mail.send(msg)        
+        return make_response(json.dumps(user.__dict__), 201)
     else:
         return make_response('Duplicate', 400)
