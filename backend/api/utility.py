@@ -39,12 +39,10 @@ def subscribe():
         user = User(email)
         db.session.add(user)
         db.session.commit()
-        print(user)
-        print(json.dumps(user.__dict__))
         # Create email and send it
         #msg = Message('Welcome to ChartBulls!', recipients=[email])
         #msg.html = render_template('email_templates/subscribed.html')
         #mail.send(msg)        
-        return make_response(json.dumps(user.__dict__), 201)
+        return make_response(str(user.id), 201)
     else:
         return make_response('Duplicate', 400)

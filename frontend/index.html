@@ -8,6 +8,7 @@
     <!-- Description -->
     <meta name="description" content="ChartBulls">
     <!-- CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="frontend/assets/css/main.css">
     <!-- Favicon -->
@@ -30,7 +31,9 @@
       <!-- Get Early Access -->
       <div class="collapse navbar-collapse" id="navbar-items">
         <div class="navbar-nav ml-auto">
-          <a class="btn btn-outline-info" href="#get-early-access" role="button"> Get Early Access </a>
+          <button class="btn btn-outline-info" type="button" onclick="scrollDown()"> 
+            Get Early Access 
+          </button>
         </div>
       </div>
     </nav>
@@ -60,10 +63,12 @@
               <!-- Input Group -->
               <div class="input-group">
                 <!-- Input -->
-                <input id="input-email-jumbotron" type="text" class="form-control" placeholder="Enter Email Address">
+                <input id="input-email-jumbotron" type="text" class="form-control" placeholder="Enter Email Address" autofocus>
                 <!-- Button -->
                 <div class="input-group-append">
-                  <button class="btn btn-info btn-lg" type="button" onclick="validate('jumbotron')"> Get Early Access </button>
+                  <button id="validate-btn-jumbotron" class="btn btn-info btn-lg" type="button" onclick="validate('jumbotron')"> 
+                    Get Early Access 
+                  </button>
                 </div>
               </div>
             </div>
@@ -164,7 +169,9 @@
                   <input id="input-email-footer" type="text" class="form-control" placeholder="Enter Email Address">
                   <!-- Button -->
                   <div class="input-group-append">
-                    <button class="btn btn-info btn-lg" type="button" onclick="validate('footer')"> Get Early Access </button>
+                    <button id="validate-btn-footer" class="btn btn-info btn-lg" type="button" onclick="validate('footer')">
+                      Get Early Access 
+                    </button>
                   </div>
                 </div>
               </div>
@@ -186,22 +193,59 @@
         <div class="modal-content">
           <!-- Header -->
           <div class="modal-header">
-            <h5 class="modal-title text-center"> You have been signed up! </h5>
+            <h5 class="modal-title text-center"> 
+              You have been signed up for Early Access! 
+            </h5>   
           </div>
           <!-- Body -->
-          <div class="modal-body text-center">
-            <p> Help us prioritize which accounts to add first! </p>
+          <div class="modal-body">
+            <!-- Alert -->
+            <div id="alert-modal" class="alert alert-danger alert-dismissible fade show" role="alert" hidden>
+              Unable to submit this form. Please refresh the page.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <!-- Text -->
+            <p class="text-center"> 
+              Please help us prioritize which accounts to add first. 
+              <br>
+              Add your brokerage / investment accounts below. 
+              <br>
+              (For example: Robinhood)
+            </p>
+            <!-- Input Group -->
+            <div class="input-group">
+              <!-- Input -->
+              <input id="input-account" type="text" class="form-control" placeholder="Enter Brokerage Name or Investment Account">
+              <!-- Button -->
+              <div class="input-group-append">
+                <button class="btn btn-success" type="button" onclick="addAccount()">
+                  Add
+                </button>
+              </div>
+            </div>
+            <br>           
+            <!-- Text -->
+            <h6 id="accounts-title" class="text-center">
+              Your Accounts
+            </h6>
+            <!-- Table -->
+            <table id="accounts-table" class="table">
+              <tbody id="accounts-table-body">                
+              </tbody>
+            </table>
           </div>
           <!-- Footer -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary"> Save changes </button>
-            <button type="button" class="btn btn-secondary" data-dismiss="modal"> Close </button>
+            <button id="submit-btn" type="button" class="btn btn-info" onclick="submitAccounts()"> Submit </button>
           </div>
         </div>
       </div>
     </div>
     <!-- JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
