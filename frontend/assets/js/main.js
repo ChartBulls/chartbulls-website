@@ -4,10 +4,27 @@ var userId = null;
 var accounts = [];
 
 var accountList = [
-    'Vanguard', 
-    'Robinhood', 
+    'Coinbase', 
+    'GDAX', 
+    'Binance',
+    'Bittrex',
+    'BitMex',
+    'KuCoin',
+    'Robinhood',
+    'TD Ameritrade',
+    'Vanguard',
     'Fidelity',
-    'Coinbase'
+    'ETrade',
+    'Charles Schwab',
+    'Betterment',
+    'Acorns',
+    'Wealthfront',
+    'Wells Fargo',
+    'Chase',
+    'Bank of America',
+    'Citibank',
+    'USAA',
+    'Other'
 ];
 
 var ajaxSettings = {
