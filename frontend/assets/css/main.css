@@ -2,28 +2,24 @@
     z-index: 2147483647; 
 }
 
+/* navbar */
 .navbar {
-    background-color: white !important;
-    color:            black;
+    background-color: #333333 !important;
+    color:            white;
 }
 
-.nav-item {
-    color: #17a2b8 !important;
-}
-
+/* jumbotron */
 .jumbotron {
-    background-color: black;
+    background-color: white;
     padding-top:      140px;
-    padding-bottom:   110px;
+    padding-bottom:   100px;
     margin-top:       65px;
     margin-bottom:    0px;
 }
-
 .jumbotron-img {
     display:  inline-block;
     overflow: hidden;
 }
-
 .jumbotron-img img {
     -webkit-transform: scale(1.21);
     -moz-transform:    scale(1.21);
@@ -31,47 +27,62 @@
     -ms-transform:     scale(1.21);
     transform:         scale(1.21);
 }
-
 .header-title {
-    color:       white !important;
+    color:       black !important;
     font-size:   3.2em;
     font-weight: 300;
 }
-
 .header-description {
-    color:       white !important;
+    color:       black !important;
     font-size:   1.4em;
     font-weight: 200;
 }
 
+/* section 2 - Features #333e48 */
 .section-2 {
-    background-color: white !important;
+    background-color: #3b5998 !important;
     padding-top:      60px;
     padding-bottom:   60px;
-    color:            black;
+    color:            white;
+}
+.section-2-title {
+    font-size: 3.2em;
+    font-weight: 300;
+}
+.section-2-description {
+    font-size:   1.4em;
+    font-weight: 200;
+}
+.section-2-subtitle {
+    font-size: 1.8em;
+    font-weight: 300;
+}
+.section-2-subtitle-description {
+    font-size:   1.1em;
+    font-weight: 200;
 }
 
+/* section 3 - Phone */
 .section-3 {
     background-color: black !important;
     padding-top:      40px;
     padding-bottom:   40px;
 }
-
 .section-3-title {
     color:       white !important;
     font-size:   2.1em;
     font-weight: 3 00;
 }
 
+/* Footer */
 .footer-above {
     background-color: white !important;
     padding-top:      120px;
     padding-bottom:   120px;
     color:            black;
 }
-
 .footer-below {
-    background-color: black !important;
+    background-color: #333333 !important;
     padding-top:      15px;
     padding-bottom:   15px;
     color:            white;
