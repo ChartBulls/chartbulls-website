@@ -40,7 +40,7 @@
 
 /* section 2 - Features #333e48 #3b5998 */
 .section-2 {
-    background-color: #F5F5F5 !important;
+    background-color: #F8F8F8 !important;
     padding-top:      60px;
     padding-bottom:   60px;
     color:            black;
@@ -64,10 +64,10 @@
 
 /* section 3 - Phone */
 .section-3 {
-    background-color: black !important;
+    background-color: white !important;
     padding-top:      40px;
     padding-bottom:   40px;
-    color:            white !important;
+    color:            black !important;
 }
 .section-3-title {
     font-size:   2em;
@@ -76,7 +76,7 @@
 
 /* Footer */
 .footer-above {
-    background-color: white !important;
+    background-color: #F8F8F8 !important;
     padding-top:      120px;
     padding-bottom:   120px;
     color:            black;
@@ -90,7 +90,7 @@
     font-weight: 200;
 }
 .footer-below {
-    background-color: #333333 !important;
+    background-color: #3b5998 !important;
     padding-top:      15px;
     padding-bottom:   15px;
     color:            white;
