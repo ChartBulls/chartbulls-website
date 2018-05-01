@@ -21,11 +21,11 @@
     overflow: hidden;
 }
 .jumbotron-img img {
-    -webkit-transform: scale(1.21);
-    -moz-transform:    scale(1.21);
-    -o-transform:      scale(1.21);
-    -ms-transform:     scale(1.21);
-    transform:         scale(1.21);
+    -webkit-transform: scale(1.17);
+    -moz-transform:    scale(1.17);
+    -o-transform:      scale(1.17);
+    -ms-transform:     scale(1.17);
+    transform:         scale(1.17);
 }
 .header-title {
     color:       black !important;
@@ -38,15 +38,15 @@
     font-weight: 200;
 }
 
-/* section 2 - Features #333e48 */
+/* section 2 - Features #333e48 #3b5998 */
 .section-2 {
-    background-color: #3b5998 !important;
+    background-color: #F5F5F5 !important;
     padding-top:      60px;
     padding-bottom:   60px;
-    color:            white;
+    color:            black;
 }
 .section-2-title {
-    font-size: 3.2em;
+    font-size:   3.2em;
     font-weight: 300;
 }
 .section-2-description {
@@ -54,7 +54,7 @@
     font-weight: 200;
 }
 .section-2-subtitle {
-    font-size: 1.8em;
+    font-size:   1.8em;
     font-weight: 300;
 }
 .section-2-subtitle-description {
@@ -67,11 +67,11 @@
     background-color: black !important;
     padding-top:      40px;
     padding-bottom:   40px;
+    color:            white !important;
 }
 .section-3-title {
-    color:       white !important;
-    font-size:   2.1em;
-    font-weight: 3 00;
+    font-size:   2em;
+    font-weight: 300;
 }
 
 /* Footer */
@@ -80,6 +80,14 @@
     padding-top:      120px;
     padding-bottom:   120px;
     color:            black;
+}
+.footer-above-title {
+    font-size:   2em;
+    font-weight: 300;
+}
+.footer-above-description {
+    font-size:   1.1em;
+    font-weight: 200;
 }
 .footer-below {
     background-color: #333333 !important;
