@@ -78,7 +78,7 @@ function subscribe(email, type) {
         success: function(response) {
             userId = response;
             accounts = [];
-            
+
             $('#accounts-title').hide();
             $('#accounts-table').hide();
             $('#my-modal').modal({ 
@@ -161,6 +161,10 @@ function submitAccounts() {
             success: function(response) {
                 if (i == accounts.length - 1) {
                     $('#my-modal').modal('hide');
+                    $('#alert-jumbotron-success').removeAttr('hidden');
+                    $('#alert-jumbotron-success').show();
+                    $('#alert-jumbotron-success').fadeTo(0, 1);
+                    setTimeout(() => $('#alert-jumbotron-success').fadeTo(700, 0).slideUp(700, function() { $(this).attr('hidden'); }), 2000);
                 }
             },
             error: function(response) {                
