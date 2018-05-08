@@ -63,7 +63,6 @@ function validate(type) {
 
     if (email) {
         subscribe(email, type);
-        $('#input-email-' + type).val('');
     } else {
         errorAlert(type, 'Please enter your email address.');
     }
@@ -81,6 +80,7 @@ function subscribe(email, type) {
             userId = response;
             accounts = [];
 
+            $('#input-email-' + type).val('');
             $('#accounts-title').hide();
             $('#accounts-table').hide();
             $('#my-modal').modal({ 
@@ -146,9 +146,11 @@ function showAccounts() {
     if (accounts.length > 0) {
         $('#accounts-title').show();
         $('#accounts-table').show();
+        $('#submit-btn').removeAttr('disabled');
     } else {
         $('#accounts-title').hide();
         $('#accounts-table').hide();
+        $('#submit-btn').attr('disabled');
     }
 }
 
