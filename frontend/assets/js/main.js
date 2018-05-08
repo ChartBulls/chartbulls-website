@@ -63,6 +63,7 @@ function validate(type) {
 
     if (email) {
         subscribe(email, type);
+        $('#input-email-' + type).val('');
     } else {
         errorAlert(type, 'Please enter your email address.');
     }

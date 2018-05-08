@@ -35,14 +35,14 @@ def subscribe():
     found = User.query.filter_by(email=email).first()
 
     if found is None:
-        # Add new user
-        user = User(email)
-        db.session.add(user)
-        db.session.commit()
         # Create email and send it
         msg = Message('Welcome to ChartBulls!', recipients=[email])
         msg.html = render_template('email_templates/subscribed.html')
-        mail.send(msg)        
+        mail.send(msg)
+        # Add new user
+        user = User(email)
+        db.session.add(user)
+        db.session.commit()                
         return make_response(str(user.id), 201)
     else:
         return make_response('Duplicate', 400)
