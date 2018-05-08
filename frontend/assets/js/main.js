@@ -87,6 +87,7 @@ function subscribe(email, type) {
                 backdrop: 'static', 
                 keyboard: false 
             });
+            $('#submit-btn').attr('disabled');
             $('#input-account').autocomplete({
                 source: accountList
             });
