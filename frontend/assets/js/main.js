@@ -94,8 +94,9 @@ function subscribe(email, type) {
                 if(e.which == 13) {
                     addAccount();
                 }
-            });
-            loadBtn('validate-btn-' + type, false, 'Get Early Access');    
+            });            
+            var html = '<span class="button-text"> Get Early Access </span><i class="fas fa-paper-plane"></i>';
+            loadBtn('validate-btn-' + type, false, html);    
             loadBtn('submit-btn', true, 'Submit');
         },
         error: function(response) {
