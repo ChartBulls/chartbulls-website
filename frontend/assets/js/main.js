@@ -87,7 +87,6 @@ function subscribe(email, type) {
                 backdrop: 'static', 
                 keyboard: false 
             });
-            $('#submit-btn').attr('disabled');
             $('#input-account').autocomplete({
                 source: accountList
             });
@@ -97,7 +96,7 @@ function subscribe(email, type) {
                 }
             });
             loadBtn('validate-btn-' + type, false, 'Get Early Access');    
-            loadBtn('submit-btn', false, 'Submit'); 
+            loadBtn('submit-btn', true, 'Submit');
         },
         error: function(response) {
             if (response.responseText == 'Duplicate') {
@@ -147,11 +146,11 @@ function showAccounts() {
     if (accounts.length > 0) {
         $('#accounts-title').show();
         $('#accounts-table').show();
-        $('#submit-btn').removeAttr('disabled');
+        $('#submit-btn').prop('disabled', false);
     } else {
         $('#accounts-title').hide();
         $('#accounts-table').hide();
-        $('#submit-btn').attr('disabled');
+        $('#submit-btn').prop('disabled', true);
     }
 }
 
