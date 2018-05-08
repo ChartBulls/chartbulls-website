@@ -47,11 +47,12 @@ function errorAlert(type, msg) {
     $('#alert-' + type).show();
     $('#alert-' + type).fadeTo(0, 1);
     setTimeout(() => $('#alert-' + type).fadeTo(700, 0).slideUp(700, function() { $(this).attr('hidden'); }), 2000);
-    loadBtn('validate-btn-' + type, false, 'Get Early Access');
+    var html = '<span class="button-text"> Get Early Access </span><i class="fas fa-paper-plane"></i>';
+    loadBtn('validate-btn-' + type, false, html);
 }
 
 function loadBtn(div, disable, msg) {
-    $('#' + div).text(msg);
+    $('#' + div).html(msg);
     $('#' + div).prop('disabled', disable);
 }
 
@@ -87,6 +88,11 @@ function subscribe(email, type) {
             });
             $('#input-account').autocomplete({
                 source: accountList
+            });
+            $('#input-account').keypress(function(e) {
+                if(e.which == 13) {
+                    addAccount();
+                }
             });
             loadBtn('validate-btn-' + type, false, 'Get Early Access');    
             loadBtn('submit-btn', false, 'Submit'); 
